@@ -1,22 +1,22 @@
 <?php
 
-namespace Spatie\Activitylog\Traits;
+namespace ZeroGodForce\Activitylog\Traits;
 
 use Carbon\CarbonInterval;
 use DateInterval;
-use Illuminate\Database\Eloquent\Model;
+use Jenssegers\Mongodb\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Pipeline\Pipeline;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use Spatie\Activitylog\ActivityLogger;
-use Spatie\Activitylog\ActivitylogServiceProvider;
-use Spatie\Activitylog\ActivityLogStatus;
-use Spatie\Activitylog\Contracts\LoggablePipe;
-use Spatie\Activitylog\EventLogBag;
-use Spatie\Activitylog\LogOptions;
+use ZeroGodForce\Activitylog\ActivityLogger;
+use ZeroGodForce\Activitylog\ActivitylogServiceProvider;
+use ZeroGodForce\Activitylog\ActivityLogStatus;
+use ZeroGodForce\Activitylog\Contracts\LoggablePipe;
+use ZeroGodForce\Activitylog\EventLogBag;
+use ZeroGodForce\Activitylog\LogOptions;
 
 trait LogsActivity
 {

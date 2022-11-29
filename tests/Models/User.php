@@ -1,10 +1,10 @@
 <?php
 
-namespace Spatie\Activitylog\Test\Models;
+namespace ZeroGodForce\Activitylog\Test\Models;
 
 use Illuminate\Contracts\Auth\Authenticatable;
-use Illuminate\Database\Eloquent\Model;
-use Spatie\Activitylog\Traits\CausesActivity;
+use Jenssegers\Mongodb\Eloquent\Model;
+use ZeroGodForce\Activitylog\Traits\CausesActivity;
 
 class User extends Model implements Authenticatable
 {

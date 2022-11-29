@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\Activitylog\Traits;
+namespace ZeroGodForce\Activitylog\Traits;
 
 use Illuminate\Database\Eloquent\Relations\MorphMany;
-use Spatie\Activitylog\ActivitylogServiceProvider;
+use ZeroGodForce\Activitylog\ActivitylogServiceProvider;
 
 trait CausesActivity
 {

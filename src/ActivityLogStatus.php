@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Activitylog;
+namespace ZeroGodForce\Activitylog;
 
 use Illuminate\Contracts\Config\Repository;
 

@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Auth;
-use Spatie\Activitylog\Exceptions\CouldNotLogActivity;
-use Spatie\Activitylog\Facades\CauserResolver;
-use Spatie\Activitylog\Test\Models\Article;
-use Spatie\Activitylog\Test\Models\User;
+use ZeroGodForce\Activitylog\Exceptions\CouldNotLogActivity;
+use ZeroGodForce\Activitylog\Facades\CauserResolver;
+use ZeroGodForce\Activitylog\Test\Models\Article;
+use ZeroGodForce\Activitylog\Test\Models\User;
 
 it('can resolve current logged in user', function () {
     Auth::login($user = User::first());

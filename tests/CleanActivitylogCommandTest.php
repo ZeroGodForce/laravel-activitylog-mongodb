@@ -1,7 +1,7 @@
 <?php
 
 use Carbon\Carbon;
-use Spatie\Activitylog\Models\Activity;
+use ZeroGodForce\Activitylog\Models\Activity;
 
 beforeEach(function () {
     Carbon::setTestNow(Carbon::create(2016, 1, 1, 00, 00, 00));

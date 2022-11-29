@@ -4,14 +4,14 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Collection;
-use Spatie\Activitylog\LogOptions;
-use Spatie\Activitylog\Models\Activity;
-use Spatie\Activitylog\Test\Enums\NonBackedEnum;
-use Spatie\Activitylog\Test\Models\Article;
-use Spatie\Activitylog\Test\Models\ArticleWithLogDescriptionClosure;
-use Spatie\Activitylog\Test\Models\Issue733;
-use Spatie\Activitylog\Test\Models\User;
-use Spatie\Activitylog\Traits\LogsActivity;
+use ZeroGodForce\Activitylog\LogOptions;
+use ZeroGodForce\Activitylog\Models\Activity;
+use ZeroGodForce\Activitylog\Test\Enums\NonBackedEnum;
+use ZeroGodForce\Activitylog\Test\Models\Article;
+use ZeroGodForce\Activitylog\Test\Models\ArticleWithLogDescriptionClosure;
+use ZeroGodForce\Activitylog\Test\Models\Issue733;
+use ZeroGodForce\Activitylog\Test\Models\User;
+use ZeroGodForce\Activitylog\Traits\LogsActivity;
 
 beforeEach(function () {
     $this->article = new class() extends Article {
@@ -537,7 +537,7 @@ it('logs int backed enum casted attribute', function () {
         use LogsActivity;
 
         protected $casts = [
-            'status' => \Spatie\Activitylog\Test\Enums\IntBackedEnum::class,
+            'status' => \ZeroGodForce\Activitylog\Test\Enums\IntBackedEnum::class,
         ];
 
         public function getActivitylogOptions(): LogOptions
@@ -547,7 +547,7 @@ it('logs int backed enum casted attribute', function () {
     };
 
     $article = new $articleClass();
-    $article->status = \Spatie\Activitylog\Test\Enums\IntBackedEnum::Published;
+    $article->status = \ZeroGodForce\Activitylog\Test\Enums\IntBackedEnum::Published;
     $article->save();
 
     $this->assertInstanceOf(get_class($articleClass), $this->getLastActivity()->subject);
@@ -562,7 +562,7 @@ it('logs string backed enum casted attribute', function () {
         use LogsActivity;
 
         protected $casts = [
-            'status' => \Spatie\Activitylog\Test\Enums\StringBackedEnum::class,
+            'status' => \ZeroGodForce\Activitylog\Test\Enums\StringBackedEnum::class,
         ];
 
         public function getActivitylogOptions(): LogOptions
@@ -572,7 +572,7 @@ it('logs string backed enum casted attribute', function () {
     };
 
     $article = new $articleClass();
-    $article->status = \Spatie\Activitylog\Test\Enums\StringBackedEnum::Draft;
+    $article->status = \ZeroGodForce\Activitylog\Test\Enums\StringBackedEnum::Draft;
     $article->save();
 
     $this->assertInstanceOf(get_class($articleClass), $this->getLastActivity()->subject);

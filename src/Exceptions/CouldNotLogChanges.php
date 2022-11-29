@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Activitylog\Exceptions;
+namespace ZeroGodForce\Activitylog\Exceptions;
 
 use Exception;
 

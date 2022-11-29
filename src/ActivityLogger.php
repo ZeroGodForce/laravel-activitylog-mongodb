@@ -1,16 +1,16 @@
 <?php
 
-namespace Spatie\Activitylog;
+namespace ZeroGodForce\Activitylog;
 
 use Closure;
 use DateTimeInterface;
 use Illuminate\Contracts\Config\Repository;
-use Illuminate\Database\Eloquent\Model;
+use Jenssegers\Mongodb\Eloquent\Model;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
 use Illuminate\Support\Traits\Conditionable;
 use Illuminate\Support\Traits\Macroable;
-use Spatie\Activitylog\Contracts\Activity as ActivityContract;
+use ZeroGodForce\Activitylog\Contracts\Activity as ActivityContract;
 
 class ActivityLogger
 {

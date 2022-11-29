@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\Activitylog\Test\Models;
+namespace ZeroGodForce\Activitylog\Test\Models;
 
-use Spatie\Activitylog\Models\Activity;
+use ZeroGodForce\Activitylog\Models\Activity;
 
 class CustomTableNameOnActivityModel extends Activity
 {

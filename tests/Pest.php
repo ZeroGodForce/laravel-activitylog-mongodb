@@ -1,5 +1,5 @@
 <?php
 
-use Spatie\Activitylog\Test\TestCase;
+use ZeroGodForce\Activitylog\Test\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

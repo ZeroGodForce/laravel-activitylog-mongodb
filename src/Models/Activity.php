@@ -1,16 +1,16 @@
 <?php
 
-namespace Spatie\Activitylog\Models;
+namespace ZeroGodForce\Activitylog\Models;
 
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
+use Jenssegers\Mongodb\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
-use Spatie\Activitylog\Contracts\Activity as ActivityContract;
+use ZeroGodForce\Activitylog\Contracts\Activity as ActivityContract;
 
 /**
- * Spatie\Activitylog\Models\Activity.
+ * ZeroGodForce\Activitylog\Models\Activity.
  *
  * @property int $id
  * @property string|null $log_name
@@ -24,19 +24,19 @@ use Spatie\Activitylog\Contracts\Activity as ActivityContract;
  * @property \Illuminate\Support\Collection|null $properties
  * @property \Carbon\Carbon|null $created_at
  * @property \Carbon\Carbon|null $updated_at
- * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent $causer
+ * @property-read \Jenssegers\Mongodb\Eloquent\Model|\Eloquent $causer
  * @property-read \Illuminate\Support\Collection $changes
- * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent $subject
+ * @property-read \Jenssegers\Mongodb\Eloquent\Model|\Eloquent $subject
  *
- * @method static \Illuminate\Database\Eloquent\Builder|\Spatie\Activitylog\Models\Activity causedBy(\Illuminate\Database\Eloquent\Model $causer)
- * @method static \Illuminate\Database\Eloquent\Builder|\Spatie\Activitylog\Models\Activity forBatch(string $batchUuid)
- * @method static \Illuminate\Database\Eloquent\Builder|\Spatie\Activitylog\Models\Activity forEvent(string $event)
- * @method static \Illuminate\Database\Eloquent\Builder|\Spatie\Activitylog\Models\Activity forSubject(\Illuminate\Database\Eloquent\Model $subject)
- * @method static \Illuminate\Database\Eloquent\Builder|\Spatie\Activitylog\Models\Activity hasBatch()
- * @method static \Illuminate\Database\Eloquent\Builder|\Spatie\Activitylog\Models\Activity inLog($logNames)
- * @method static \Illuminate\Database\Eloquent\Builder|\Spatie\Activitylog\Models\Activity newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\Spatie\Activitylog\Models\Activity newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\Spatie\Activitylog\Models\Activity query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\ZeroGodForce\Activitylog\Models\Activity causedBy(\Jenssegers\Mongodb\Eloquent\Model $causer)
+ * @method static \Illuminate\Database\Eloquent\Builder|\ZeroGodForce\Activitylog\Models\Activity forBatch(string $batchUuid)
+ * @method static \Illuminate\Database\Eloquent\Builder|\ZeroGodForce\Activitylog\Models\Activity forEvent(string $event)
+ * @method static \Illuminate\Database\Eloquent\Builder|\ZeroGodForce\Activitylog\Models\Activity forSubject(\Jenssegers\Mongodb\Eloquent\Model $subject)
+ * @method static \Illuminate\Database\Eloquent\Builder|\ZeroGodForce\Activitylog\Models\Activity hasBatch()
+ * @method static \Illuminate\Database\Eloquent\Builder|\ZeroGodForce\Activitylog\Models\Activity inLog($logNames)
+ * @method static \Illuminate\Database\Eloquent\Builder|\ZeroGodForce\Activitylog\Models\Activity newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\ZeroGodForce\Activitylog\Models\Activity newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\ZeroGodForce\Activitylog\Models\Activity query()
  */
 class Activity extends Model implements ActivityContract
 {

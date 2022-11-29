@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Activitylog\Test\Enums;
+namespace ZeroGodForce\Activitylog\Test\Enums;
 
 enum IntBackedEnum: int
 {

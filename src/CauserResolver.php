@@ -1,12 +1,12 @@
 <?php
 
-namespace Spatie\Activitylog;
+namespace ZeroGodForce\Activitylog;
 
 use Closure;
 use Illuminate\Auth\AuthManager;
 use Illuminate\Contracts\Config\Repository;
-use Illuminate\Database\Eloquent\Model;
-use Spatie\Activitylog\Exceptions\CouldNotLogActivity;
+use Jenssegers\Mongodb\Eloquent\Model;
+use ZeroGodForce\Activitylog\Exceptions\CouldNotLogActivity;
 
 class CauserResolver
 {

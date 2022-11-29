@@ -1,16 +1,16 @@
 <?php
 
-namespace Spatie\Activitylog\Facades;
+namespace ZeroGodForce\Activitylog\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Spatie\Activitylog\CauserResolver as ActivitylogCauserResolver;
+use ZeroGodForce\Activitylog\CauserResolver as ActivitylogCauserResolver;
 
 /**
- * @method static \Illuminate\Database\Eloquent\Model|null resolve(\Illuminate\Database\Eloquent\Model|int|string|null $subject = null)
- * @method static \Spatie\Activitylog\CauserResolver resolveUsing(\Closure $callback)
- * @method static \Spatie\Activitylog\CauserResolver setCauser(\Illuminate\Database\Eloquent\Model|null $causer)
+ * @method static \Jenssegers\Mongodb\Eloquent\Model|null resolve(\Jenssegers\Mongodb\Eloquent\Model|int|string|null $subject = null)
+ * @method static \ZeroGodForce\Activitylog\CauserResolver resolveUsing(\Closure $callback)
+ * @method static \ZeroGodForce\Activitylog\CauserResolver setCauser(\Jenssegers\Mongodb\Eloquent\Model|null $causer)
  *
- * @see \Spatie\Activitylog\CauserResolver
+ * @see \ZeroGodForce\Activitylog\CauserResolver
  */
 class CauserResolver extends Facade
 {

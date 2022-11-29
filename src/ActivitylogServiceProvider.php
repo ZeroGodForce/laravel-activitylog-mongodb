@@ -1,12 +1,12 @@
 <?php
 
-namespace Spatie\Activitylog;
+namespace ZeroGodForce\Activitylog;
 
-use Illuminate\Database\Eloquent\Model;
-use Spatie\Activitylog\Contracts\Activity;
-use Spatie\Activitylog\Contracts\Activity as ActivityContract;
-use Spatie\Activitylog\Exceptions\InvalidConfiguration;
-use Spatie\Activitylog\Models\Activity as ActivityModel;
+use Jenssegers\Mongodb\Eloquent\Model;
+use ZeroGodForce\Activitylog\Contracts\Activity;
+use ZeroGodForce\Activitylog\Contracts\Activity as ActivityContract;
+use ZeroGodForce\Activitylog\Exceptions\InvalidConfiguration;
+use ZeroGodForce\Activitylog\Models\Activity as ActivityModel;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 

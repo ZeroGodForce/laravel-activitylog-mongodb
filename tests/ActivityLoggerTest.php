@@ -3,14 +3,14 @@
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\JsonEncodingException;
 use Illuminate\Support\Collection;
-use Spatie\Activitylog\Exceptions\CouldNotLogActivity;
-use Spatie\Activitylog\Facades\CauserResolver;
-use Spatie\Activitylog\LogOptions;
-use Spatie\Activitylog\Models\Activity;
-use Spatie\Activitylog\Test\Enums\NonBackedEnum;
-use Spatie\Activitylog\Test\Models\Article;
-use Spatie\Activitylog\Test\Models\User;
-use Spatie\Activitylog\Traits\LogsActivity;
+use ZeroGodForce\Activitylog\Exceptions\CouldNotLogActivity;
+use ZeroGodForce\Activitylog\Facades\CauserResolver;
+use ZeroGodForce\Activitylog\LogOptions;
+use ZeroGodForce\Activitylog\Models\Activity;
+use ZeroGodForce\Activitylog\Test\Enums\NonBackedEnum;
+use ZeroGodForce\Activitylog\Test\Models\Article;
+use ZeroGodForce\Activitylog\Test\Models\User;
+use ZeroGodForce\Activitylog\Traits\LogsActivity;
 
 beforeEach(function () {
     $this->activityDescription = 'My activity';
@@ -435,8 +435,8 @@ it('will disable logs for a callback without affecting previous state even with 
 
 it('logs backed enums in properties', function () {
     activity()
-        ->withProperties(['int_backed_enum' => \Spatie\Activitylog\Test\Enums\IntBackedEnum::Draft])
-        ->withProperty('string_backed_enum', \Spatie\Activitylog\Test\Enums\StringBackedEnum::Published)
+        ->withProperties(['int_backed_enum' => \ZeroGodForce\Activitylog\Test\Enums\IntBackedEnum::Draft])
+        ->withProperty('string_backed_enum', \ZeroGodForce\Activitylog\Test\Enums\StringBackedEnum::Published)
         ->log($this->activityDescription);
 
     $this->assertSame(0, $this->getLastActivity()->properties['int_backed_enum']);

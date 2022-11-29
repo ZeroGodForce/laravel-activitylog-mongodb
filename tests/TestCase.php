@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Activitylog\Test;
+namespace ZeroGodForce\Activitylog\Test;
 
 use AddBatchUuidColumnToActivityLogTable;
 use AddEventColumnToActivityLogTable;
@@ -9,10 +9,10 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Encryption\Encrypter;
 use Illuminate\Support\Facades\Schema;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
-use Spatie\Activitylog\ActivitylogServiceProvider;
-use Spatie\Activitylog\Models\Activity;
-use Spatie\Activitylog\Test\Models\Article;
-use Spatie\Activitylog\Test\Models\User;
+use ZeroGodForce\Activitylog\ActivitylogServiceProvider;
+use ZeroGodForce\Activitylog\Models\Activity;
+use ZeroGodForce\Activitylog\Test\Models\Article;
+use ZeroGodForce\Activitylog\Test\Models\User;
 
 abstract class TestCase extends OrchestraTestCase
 {

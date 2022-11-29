@@ -32,10 +32,10 @@ return [
 
     /*
      * This model will be used to log activity.
-     * It should implement the Spatie\Activitylog\Contracts\Activity interface
+     * It should implement the ZeroGodForce\Activitylog\Contracts\Activity interface
      * and extend Illuminate\Database\Eloquent\Model.
      */
-    'activity_model' => \Spatie\Activitylog\Models\Activity::class,
+    'activity_model' => \ZeroGodForce\Activitylog\Models\Activity::class,
 
     /*
      * This is the name of the table that will be created by the migration and

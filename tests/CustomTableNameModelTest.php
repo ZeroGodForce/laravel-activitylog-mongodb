@@ -1,7 +1,7 @@
 <?php
 
-use Spatie\Activitylog\Models\Activity;
-use Spatie\Activitylog\Test\Models\CustomTableNameOnActivityModel;
+use ZeroGodForce\Activitylog\Models\Activity;
+use ZeroGodForce\Activitylog\Test\Models\CustomTableNameOnActivityModel;
 
 it('uses the table name from the configuration', function () {
     $model = new Activity();

@@ -12,8 +12,8 @@ To start a new batch call `LogBatch::startBatch()` before any activity is done. 
 Here's an example:
 
 ```php
-use Spatie\Activitylog\Facades\LogBatch;
-use Spatie\Activitylog\Models\Activity;
+use ZeroGodForce\Activitylog\Facades\LogBatch;
+use ZeroGodForce\Activitylog\Models\Activity;
 
 LogBatch::startBatch();
 $author = Author::create(['name' => 'Philip K. Dick']);
@@ -44,8 +44,8 @@ Example results:
 **Note** that in the examples both `Author` and `Book` are implementing `LogsActivity` trait.
 
 ```php
-use Spatie\Activitylog\Facades\LogBatch;
-use Spatie\Activitylog\Models\Activity;
+use ZeroGodForce\Activitylog\Facades\LogBatch;
+use ZeroGodForce\Activitylog\Models\Activity;
 
 LogBatch::startBatch();
 
@@ -98,7 +98,7 @@ You may utilize `LogBatch::setBatch($uuid)` passing `$uuid` or any unique value 
 Here's an example:
 
 ```php
-use Spatie\Activitylog\Facades\LogBatch;
+use ZeroGodForce\Activitylog\Facades\LogBatch;
 use Illuminate\Bus\Batch;
 use Illuminate\Support\Str;
 
@@ -145,7 +145,7 @@ You can also batch activities using closure passed to `LogBatch::withinBatch()`.
 Here's an example:
 
 ```php
-use Spatie\Activitylog\Facades\LogBatch;
+use ZeroGodForce\Activitylog\Facades\LogBatch;
 
 LogBatch::withinBatch(function(string $uuid) {
     $uuid; // 5cce9cb3-3144-4d35-9015-830cf0f20691

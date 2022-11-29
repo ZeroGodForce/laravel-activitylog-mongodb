@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\Activitylog\Contracts;
+namespace ZeroGodForce\Activitylog\Contracts;
 
 use Closure;
-use Spatie\Activitylog\EventLogBag;
+use ZeroGodForce\Activitylog\EventLogBag;
 
 interface LoggablePipe
 {

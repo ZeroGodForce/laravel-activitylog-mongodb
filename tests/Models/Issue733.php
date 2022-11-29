@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\Activitylog\Test\Models;
+namespace ZeroGodForce\Activitylog\Test\Models;
 
-use Spatie\Activitylog\LogOptions;
-use Spatie\Activitylog\Traits\LogsActivity;
+use ZeroGodForce\Activitylog\LogOptions;
+use ZeroGodForce\Activitylog\Traits\LogsActivity;
 
 class Issue733 extends Article
 {

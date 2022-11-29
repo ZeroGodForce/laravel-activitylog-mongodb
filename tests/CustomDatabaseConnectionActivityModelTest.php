@@ -1,7 +1,7 @@
 <?php
 
-use Spatie\Activitylog\Models\Activity;
-use Spatie\Activitylog\Test\Models\CustomDatabaseConnectionOnActivityModel;
+use ZeroGodForce\Activitylog\Models\Activity;
+use ZeroGodForce\Activitylog\Test\Models\CustomDatabaseConnectionOnActivityModel;
 
 it('uses the database connection from the configuration', function () {
     $model = new Activity();
